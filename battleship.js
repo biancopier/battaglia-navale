@@ -88,3 +88,20 @@ if (esito === "colpito") {
 
 console.log(sparaColpo(campo, navi, 2, 1), sparaColpo(campo, navi, 0, 0));
 stampaCampo(campo);
+
+
+function navaAffondata(campo) {
+    return campo[2][1] === "X" && campo[2][2] === "X" && campo[2][3] === "X";
+}
+
+console.log(navaAffondata(campo));
+
+
+let colpi = 0;
+let colpite = 0;
+
+while (!navaAffondata(campo)) {
+    const rigaColpo = Number(prompt("Riga (0-4): "));
+    const colonnaColpo = Number(prompt("Colonna (0-4): "));
+    const esito = sparaColpo(campo, navi, rigaColpo, colonnaColpo);
+}
